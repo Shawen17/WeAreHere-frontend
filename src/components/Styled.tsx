@@ -1,0 +1,122 @@
+import styled from "styled-components";
+
+export const FormDisplay = styled.div`
+  width: 40%;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+
+  @media screen and (max-width: 600px) {
+    padding: 10px;
+    width: 80%;
+    margin: 0px;
+  }
+`;
+
+export const Outline = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: black;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #0eb3f4;
+  margin: 20px 0px 5px 0px;
+  cursor: pointer;
+  &:hover {
+    background-color: #126180;
+  }
+`;
+
+export const SearchContainer = styled.div`
+  margin-bottom: 5px;
+  border: 0.5px solid #18a558;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 30px;
+  width: 100%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+`;
+
+export const Input = styled.input`
+  margin-left: 10px;
+
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-style: none;
+  &:focus {
+    outline: none;
+    border-color: none;
+    border: none;
+    background-color: transparent;
+  }
+`;
+
+export const Label = styled.label`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-buttom: 3px;
+  font-size: 13px;
+`;
+
+export const Title = styled.div`
+  display: flex;
+  font-size: 18px;
+  font-family: "Urbanist", sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+`;
+
+export const MiniContainer = styled.div`
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+`;
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  width: 100%;
+`;
+
+export const Select = styled.select`
+  margin-left: 10px;
+
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-style: none;
+  &:focus {
+    outline: none;
+    border-color: none;
+    border: none;
+    background-color: transparent;
+  }
+`;

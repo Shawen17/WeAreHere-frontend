@@ -1,0 +1,111 @@
+.likeStyle {
+  color: red;
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+.grow {
+  -webkit-animation: fade 3s ease-in-out;
+  animation: fade 1s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    transform: scale(3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    transform: scale(3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.desc {
+  font-size: 17px;
+  padding: 5px 0px 0px 5px;
+}
+.desc p {
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+}
+
+.desc div {
+  color: black;
+  font-size: 22px;
+}
+
+.amt {
+  margin: 5px 5px 0px 0px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#rate {
+  font-size: 11px;
+  color: darkgrey;
+  margin-left: 40px;
+}
+
+#dot {
+  font-size: 45px;
+}
+
+.review {
+  color: darkgrey;
+}
+
+.review:hover {
+  color: teal;
+  border-bottom: 2px solid teal;
+}
+
+.desc-review {
+  color: darkgrey;
+}
+
+.cart {
+  font-size: 13px;
+  color: darkgrey;
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 15px 20px 15px;
+}
+
+.cart p {
+  color: teal;
+  font-size: 25px;
+}

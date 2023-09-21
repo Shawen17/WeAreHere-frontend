@@ -3,16 +3,48 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.3",
+    "@redux-devtools/extension": "^3.2.5",
+    "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/babel__core": "^7.20.1",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.39",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.1",
+    "classnames": "^2.3.2",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.0",
+    "framer-motion": "^10.16.0",
+    "fs": "^0.0.1-security",
+    "os": "^0.1.2",
+    "os-browserify": "^0.3.0",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-click-away-listener": "^2.2.3",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-intersection-observer": "^9.5.2",
+    "react-modal": "^3.16.1",
+    "react-player": "^2.13.0",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
+    "reactstrap": "^9.2.0",
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "^6.0.7",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -20,7 +52,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\""
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +72,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "browser": {
+    "crypto": false,
+    "fs": false,
+    "os": false,
+    "path": false
+  },
+  "devDependencies": {
+    "@types/react-modal": "^3.16.0",
+    "sass": "^1.66.1"
   }
 }
