@@ -16,7 +16,7 @@ const Container = styled.div`
   background: transparent;
   font-family: "Bricolage Grotesque", sans-serif;
   width: 100vw;
-  padding: 0px 15px 0px 15px;
+  padding: 15px;
 
   @media screen and (max-width: 482px) {
     background: whitesmoke;
