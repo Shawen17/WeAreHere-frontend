@@ -62,16 +62,14 @@ export const SearchContainer = styled.div`
 
 export const Input = styled.input`
   margin-left: 10px;
-
   width: 100%;
   border: none;
   background-color: transparent;
   border-style: none;
   &:focus {
     outline: none;
-    border-color: none;
-    border: none;
-    background-color: transparent;
+    border-color: #00b894;
+    box-shadow: 0 0 10px #00b894;
   }
 `;
 

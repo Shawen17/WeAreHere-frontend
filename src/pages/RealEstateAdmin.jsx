@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import {
   Table,
   TableHead,
@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { handleDate } from "../components/UserAccount";
 import { Container } from "../components/form/LoginForm";
+import SearchIcon from "@mui/icons-material/Search";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import Pagination from "@mui/material/Pagination";
@@ -21,6 +22,7 @@ import DeleteButton from "../components/realEstate/DeleteButton";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 import CircularProgress from "@mui/material/CircularProgress";
+import { Input } from "../components/Styled";
 
 const Line = styled.div`
   height: 1px;
@@ -97,6 +99,30 @@ const Admin = styled.div`
   cursor: pointer;
 `;
 
+const Back = styled.div`
+  padding-left: 15px;
+  cursor: pointer;
+  margin-right: auto;
+  margin-bottom: 10px;
+`;
+
+const SearchContainer = styled.div`
+  margin-bottom: 5px;
+  border-radius: 6px;
+  border: 2px solid #d3d3d3;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 40px;
+  flex: 50%;
+  margin: 10px;
+  cursor: pointer;
+
+  @media screen and (max-width: 468px) {
+    flex: 70%;
+  }
+`;
+
 const pageSize = 3;
 
 const RealEstateAdmin = () => {
@@ -107,6 +133,7 @@ const RealEstateAdmin = () => {
   const [pages, setPages] = useState(1);
   const [deleted, setDeleted] = useState(false);
   const [updated, setUpdated] = useState(false);
+  const [search, setSearch] = useState(null);
   const navigate = useNavigate();
   const email = localStorage.getItem("email");
   const [clicked, setClicked] = useState(false);
@@ -117,6 +144,10 @@ const RealEstateAdmin = () => {
 
   const bookingClicked = () => {
     setClicked(true);
+  };
+
+  const subscription = () => {
+    navigate("/admin/subscribe");
   };
 
   useEffect(() => {
@@ -141,11 +172,12 @@ const RealEstateAdmin = () => {
         setPages(Math.ceil(count / pageSize));
       } catch (error) {
         setError("something went wrong");
+        navigate("/login/?next=/admin/real-estate");
       }
     };
 
     fetchProperties();
-  }, [email, deleted, updated]);
+  }, [email, deleted, updated, navigate]);
 
   const toggleRowSelection = (id) => {
     const selectedIndex = selectedRows.indexOf(id);
@@ -190,17 +222,50 @@ const RealEstateAdmin = () => {
     }
   };
 
+  const filteredSearch = useCallback(() => {
+    let result;
+    if (search && search.length > 2) {
+      if (!clicked) {
+        result = data.items.orders.filter((item) => {
+          return (
+            item.state.toLowerCase().includes(search.toLowerCase()) ||
+            item.location.toLowerCase().includes(search.toLowerCase()) ||
+            item.description.toLowerCase().includes(search.toLowerCase())
+          );
+        });
+      }
+      if (clicked) {
+        result = data.items.bookings.filter((item) => {
+          return (
+            item.customer_email.toLowerCase().includes(search.toLowerCase()) ||
+            item.customer_phone.toLowerCase().includes(search.toLowerCase()) ||
+            item.apartment.toLowerCase().includes(search.toLowerCase())
+          );
+        });
+      }
+    } else {
+      if (!clicked) {
+        result = data.items.orders;
+      } else {
+        result = data.items.bookings;
+      }
+    }
+    return result;
+  }, [clicked, search, data.items]);
+
   const currentProperty = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * pageSize;
     const lastPageIndex = firstPageIndex + pageSize;
-    return data.items.orders.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage, data.items.orders]);
+    const data = filteredSearch();
+    return data.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage, filteredSearch]);
 
   const currentBooking = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * pageSize;
     const lastPageIndex = firstPageIndex + pageSize;
-    return data.items.bookings.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage, data.items.bookings]);
+    const data = filteredSearch();
+    return data.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage, filteredSearch]);
 
   const handleEdit = (id) => {
     const index = currentProperty.findIndex((item) => item.id === id);
@@ -227,6 +292,8 @@ const RealEstateAdmin = () => {
       );
       if (response.status === 204) {
         setDeleted(true);
+      } else if (response.status === 401) {
+        navigate("/login/?next=/admin/real-estate");
       }
     } catch (error) {
       setError("Error deleting item");
@@ -250,6 +317,8 @@ const RealEstateAdmin = () => {
       );
       if (response.status === 204) {
         setDeleted(true);
+      } else if (response.status === 401) {
+        navigate("/login/?next=/admin/real-estate");
       }
     } catch (error) {
       setError("Error deleting item");
@@ -414,7 +483,7 @@ const RealEstateAdmin = () => {
         ) : (
           ""
         )}
-        {selectedRows.length > 1 && clicked ? (
+        {selectedRows.length > 0 && clicked ? (
           <div
             style={{
               display: "flex",
@@ -454,11 +523,23 @@ const RealEstateAdmin = () => {
           <Top className="mt-4" onClick={bookingClicked}>
             <Info>Bookings</Info>
           </Top>
-          <Top className="mt-4">
+          <Top className="mt-4" onClick={subscription}>
             <Info>Subscribe</Info>
           </Top>
         </SideContainer>
         <Container style={{ marginTop: 20 }}>
+          <Back>
+            <SearchContainer tabIndex={0} role="button">
+              <Input
+                placeholder="email, name or phone number"
+                name="search"
+                value={search}
+                type="text"
+                onChange={(event) => setSearch(event.target.value)}
+              />
+              <SearchIcon />
+            </SearchContainer>
+          </Back>
           {clicked ? Bookings : Properties}
         </Container>
       </div>

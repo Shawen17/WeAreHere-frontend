@@ -164,7 +164,11 @@ const RealEstateHome = (props) => {
 
   const handleFilter = (e) => {
     e.preventDefault();
-    navigate("/properties", { state: inputs });
+    if (inputs) {
+      navigate("/properties", { state: inputs });
+    } else {
+      navigate("/properties", { state: null });
+    }
   };
 
   const handleChange = (event) => {

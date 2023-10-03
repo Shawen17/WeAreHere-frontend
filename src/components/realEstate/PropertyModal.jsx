@@ -88,7 +88,9 @@ const SmallCircle = styled(Circ)`
 `;
 
 export const convert = (value) => {
-  return value.toLocaleString();
+  if (value) {
+    return value.toLocaleString();
+  }
 };
 
 const PropertyModal = (props) => {

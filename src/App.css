@@ -478,7 +478,7 @@
   transform: translateY(100%); /* Animation start out of the screen */
 
   /* Add the animation */
-  animation: move 20s linear infinite
+  animation: move 25s linear infinite
     /* infinite make reapeat the animation indefinitely */;
 }
 
@@ -493,7 +493,7 @@
   display: block;
   width: 100%;
   transform: translateY(-100%);
-  animation: down 20s linear infinite;
+  animation: down 25s linear infinite;
 }
 
 @keyframes down {
@@ -586,7 +586,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-image: url("./img/house1.jpg");
   background-size: cover;
   background-position: center;
-  animation: slideshow 8s ease-in 2s infinite reverse;
+  animation: slideshow 24s linear infinite;
 }
 
 @keyframes slideshow {
@@ -618,19 +618,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @-webkit-keyframes slideshow {
   0% {
-    background-position-x: 100%;
+    /* background-position-x: 100%; */
     background-image: url("./img/house1.jpg");
   }
   25% {
-    background-position-x: 0%;
+    /* background-position-x: 0%; */
     background-image: url("./img/house2.jpg");
   }
   50% {
-    background-position-x: 100%;
+    /* background-position-x: 100%; */
     background-image: url("./img/house3.jpg");
   }
   100% {
-    background-position-x: 0% 0;
+    /* background-position-x: 0% 0; */
     background-image: url("./img/house4.jpg");
   }
 }
@@ -708,4 +708,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 1;
     background: transparent;
   }
+}
+
+.paystack-button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  font-size: 12px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(135, 206, 235, 0.5);
+}
+
+.paystack-button:hover {
+  background-color: #18a558;
+}
+
+.button-con {
+  margin-top: 30px;
+  height: 35px;
+  width: 50%;
 }

@@ -9,7 +9,7 @@ const Container = styled.div`
   background: rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
-  justiify-content: center;
+  justiify-content: space-between;
   margin: 10px 10px 20px 10px;
   padding: 20px;
   flex-wrap: wrap;

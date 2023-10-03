@@ -99,65 +99,50 @@ const AdminForm = (props) => {
     event.preventDefault();
     setAdded(false);
     const facility = mergeFacility(inputs);
-    if (
-      inputs.file1 &&
-      inputs.file2 &&
-      inputs.file3 &&
-      inputs.file4 &&
-      inputs.file5 &&
-      inputs.file6 &&
-      inputs.videofile
-    ) {
-      const data = new FormData();
 
-      data.append("videofile", inputs.videofile);
-      data.append("file1", inputs.file1);
-      data.append("file2", inputs.file2);
-      data.append("file3", inputs.file3);
-      data.append("file4", inputs.file4);
-      data.append("file5", inputs.file5);
-      data.append("file6", inputs.file6);
-      data.append("email", props.email);
-      data.append("price", inputs.price);
-      data.append("category", inputs.category);
-      data.append("description", inputs.description);
-      data.append("location", inputs.location);
-      data.append("state", inputs.state);
-      data.append("details", inputs.details);
-      data.append("facility", JSON.stringify(facility));
+    const data = new FormData();
 
-      const config = {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `JWT ${localStorage.getItem("access")}`,
-          Accept: "application/json",
-        },
-      };
-      if (props.status === "on") {
-        try {
-          await axios.post(
-            `${process.env.REACT_APP_GIVEAWAYNOW_API_URL}/api/add-property/`,
-            data,
-            config
-          );
-          setAdded(true);
-          setInputs({});
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        } catch (error) {
-          navigate("/login/?next=/admin/add");
-        }
-      } else {
-        setError("your subscription has expired");
+    data.append("videofile", inputs.videofile);
+    data.append("image1", inputs.file1);
+    data.append("image2", inputs.file2);
+    data.append("image3", inputs.file3);
+    data.append("image4", inputs.file4);
+    data.append("image5", inputs.file5);
+    data.append("image6", inputs.file6);
+    data.append("email", props.email);
+    data.append("price", inputs.price);
+    data.append("category", inputs.category);
+    data.append("description", inputs.description);
+    data.append("location", inputs.location);
+    data.append("state", inputs.state);
+    data.append("details", inputs.details);
+    data.append("facility", JSON.stringify(facility));
+
+    const config = {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: `JWT ${localStorage.getItem("access")}`,
+        Accept: "application/json",
+      },
+    };
+    if (props.status === "on") {
+      try {
+        await axios.post(
+          `${process.env.REACT_APP_GIVEAWAYNOW_API_URL}/api/add-property/`,
+          data,
+          config
+        );
+        setAdded(true);
+        setInputs({});
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
+      } catch (error) {
+        navigate("/login/?next=/admin/add");
       }
     } else {
-      setError("All file fields are required");
+      setError("your subscription has expired");
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -237,6 +222,7 @@ const AdminForm = (props) => {
                   value={inputs.category || ""}
                   onChange={handleChange}
                 >
+                  <option value="others">Choose Category</option>
                   <option value="Building">Building</option>
                   <option value="Apartment">Apartment</option>
                 </Select>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import MailIcon from "@mui/icons-material/Mail";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -6,6 +6,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import ContactForm from "../form/ContactForm";
 
 const TopContainer = styled.div`
   height: 100px;
@@ -65,7 +66,7 @@ const Footer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  flex: 50%;
+  flex: 100%;
 
   @media screen and (max-width: 1145px) {
     // color: white;
@@ -94,6 +95,12 @@ const Desc = styled.p`
 `;
 
 const Slide = () => {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClicked = () => {
+    setClicked(!clicked);
+  };
+
   return (
     <div>
       <TopContainer>
@@ -121,16 +128,25 @@ const Slide = () => {
                 <MailIcon style={{ fontSize: 50 }} />
               </Icon>
               <Title>email</Title>
-              <Subtitle>contact@carisbrooke.ng</Subtitle>
+              <Subtitle>contact@wearehere.com.ng</Subtitle>
             </Box>
           </Wrapper>
           <Footer>
             <h1>Get in touch</h1>
+            <h4>Be a Partner</h4>
+            <button
+              style={{
+                backgroundColor: "#ff8624",
+                color: "white",
+                marginBottom: 10,
+              }}
+              onClick={handleClicked}
+            >
+              Contact us
+            </button>
+            {clicked && <ContactForm />}
             <Desc>
-              <em>
-                YOU CAN COUNT ON US TO DELIVER AND MAKE YOUR FOREX NEEDS
-                SEAMLESS AT A COMPETITIVE RATE WITH COMFORT IN MIND{" "}
-              </em>
+              <em>YOU CAN COUNT ON US TO DELIVER TOP NOTCH SERVICE </em>
             </Desc>
             <SocialIcon>
               <FacebookOutlinedIcon style={{ fontSize: 30 }} />

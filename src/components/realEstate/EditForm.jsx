@@ -104,12 +104,12 @@ const EditForm = (props) => {
     const data = new FormData();
     data.append("id", property.id);
     data.append("videofile", inputs.videofile);
-    data.append("file1", inputs.file1);
-    data.append("file2", inputs.file2);
-    data.append("file3", inputs.file3);
-    data.append("file4", inputs.file4);
-    data.append("file5", inputs.file5);
-    data.append("file6", inputs.file6);
+    data.append("image1", inputs.file1);
+    data.append("image2", inputs.file2);
+    data.append("image3", inputs.file3);
+    data.append("image4", inputs.file4);
+    data.append("image5", inputs.file5);
+    data.append("image6", inputs.file6);
     data.append("email", props.email);
     data.append("price", inputs.price);
     data.append("category", inputs.category);

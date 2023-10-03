@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useMemo } from "react";
-import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
 import PropertyModal from "./PropertyModal";
@@ -20,14 +19,14 @@ const Property = styled.div`
 `;
 const pageSize = 3;
 
-const Properties = () => {
+const Properties = (props) => {
   const [data, setData] = useState({ items: { orders: [] } });
   const [properties, setProperties] = useState(data.items.orders);
   const [error, setError] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [pages, setPages] = useState(1);
-  const location = useLocation();
-  const condition = location.state;
+
+  const condition = props.condition;
 
   useEffect(() => {
     const fetchProperties = async () => {
@@ -69,7 +68,7 @@ const Properties = () => {
           filteredProperty = data.items.orders.filter(function (property) {
             return property.state === condition.state;
           });
-        } else {
+        } else if (condition.category) {
           filteredProperty = data.items.orders.filter(function (property) {
             return property.category === condition.category;
           });

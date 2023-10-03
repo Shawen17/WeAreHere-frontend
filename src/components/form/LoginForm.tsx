@@ -25,7 +25,6 @@ export const Container = styled.div`
   color: #126180;
 `;
 
-// Define the props for the component
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
 const LoginForm: React.FC<PropsFromRedux> = ({
@@ -42,18 +41,17 @@ const LoginForm: React.FC<PropsFromRedux> = ({
   const location = useLocation();
   document.title = "login";
   const navigate = useNavigate();
-const next = new URLSearchParams(location.search).get('next')
+  const next = new URLSearchParams(location.search).get("next");
 
   useEffect(() => {
     if (isAuthenticated) {
-      if(next){
-        navigate(location.state)
-      }else{
+      if (next) {
+        navigate(location.state);
+      } else {
         navigate("/account");
       }
-      
     }
-  }, [isAuthenticated, navigate,location.state,next]);
+  }, [isAuthenticated, navigate, location.state, next]);
 
   const HandleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
@@ -83,7 +81,6 @@ const next = new URLSearchParams(location.search).get('next')
 
   return (
     <Container className="page-load">
-      
       <Title>Welcome! enter your details </Title>
       {loginFailed ? (
         <div style={{ color: "red" }}>email or password incorrect</div>

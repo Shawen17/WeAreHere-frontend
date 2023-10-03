@@ -26,6 +26,8 @@ import PropertyPage from "./pages/PropertyPage";
 import RealEstateAdmin from "./pages/RealEstateAdmin";
 import PropertyDetails from "./pages/PropertyDetails";
 import EditBookingForm from "./components/form/EditBookingForm";
+import Subscription from "./components/Subscription";
+import MakePayment from "./components/MakePayment";
 
 function App() {
   return (
@@ -40,6 +42,22 @@ function App() {
                 element={
                   <ProctectedRoute>
                     <RealEstateAdmin />
+                  </ProctectedRoute>
+                }
+              />
+              <Route
+                path="/admin/subscribe"
+                element={
+                  <ProctectedRoute>
+                    <Subscription />
+                  </ProctectedRoute>
+                }
+              />
+               <Route
+                path="/admin/makepayment"
+                element={
+                  <ProctectedRoute>
+                    <MakePayment />
                   </ProctectedRoute>
                 }
               />
