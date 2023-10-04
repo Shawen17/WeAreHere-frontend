@@ -125,6 +125,7 @@ const AdminForm = (props) => {
         Accept: "application/json",
       },
     };
+    console.log(config);
     if (props.status === "on") {
       try {
         await axios.post(
@@ -132,6 +133,7 @@ const AdminForm = (props) => {
           data,
           config
         );
+        console.log("in");
         setAdded(true);
         setInputs({});
         window.scrollTo({
