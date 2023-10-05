@@ -28,6 +28,7 @@ import PropertyDetails from "./pages/PropertyDetails";
 import EditBookingForm from "./components/form/EditBookingForm";
 import Subscription from "./components/Subscription";
 import MakePayment from "./components/MakePayment";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
@@ -53,7 +54,7 @@ function App() {
                   </ProctectedRoute>
                 }
               />
-               <Route
+              <Route
                 path="/admin/makepayment"
                 element={
                   <ProctectedRoute>
@@ -105,7 +106,7 @@ function App() {
                   </ProctectedRoute>
                 }
               />
-
+              <Route path="/contact" element={<ContactPage />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/service" element={<Service />} />
               <Route path="/signup/partner" element={<SignupFormPartner />} />

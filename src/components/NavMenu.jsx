@@ -40,7 +40,7 @@ const NavMenu = (props) => {
           </Link>
         </li>
         <li>
-          <Link className="mb-1 nav-item nav-link" to="/">
+          <Link className="mb-1 nav-item nav-link" to="/contact">
             Contact
           </Link>
         </li>
@@ -102,7 +102,7 @@ const NavMenu = (props) => {
           </Link>
         </li>
         <li>
-          <Link className="mb-1 nav-item nav-link" to="/">
+          <Link className="mb-1 nav-item nav-link" to="/contact">
             Contact
           </Link>
         </li>
