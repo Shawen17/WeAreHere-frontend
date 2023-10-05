@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import "../components/realEstate/Property.css";
-import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
+import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import { connect } from "react-redux";
 import { BASE_URL } from "../components/Api";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -179,7 +179,7 @@ const PropertyDetails = (props) => {
   const Handleback = () => {
     navigate(-1);
   };
-
+  console.log(property);
   const handleBooking = async () => {
     if (props.isAuthenticated) {
       const data = new FormData();
@@ -208,17 +208,14 @@ const PropertyDetails = (props) => {
         setError("something went wrong, try again");
       }
     } else {
-      navigate("/login/?next=/properties",{state:'/properties'});
+      navigate("/login/?next=/properties", { state: "/properties" });
     }
   };
 
   return (
     <div className="prod-details">
       <Back>
-        <ArrowBackOutlinedIcon
-          style={{ fontSize: 23 }}
-          onClick={Handleback}
-        />
+        <ArrowBackOutlinedIcon style={{ fontSize: 23 }} onClick={Handleback} />
       </Back>
       <ImageContainer>
         <MIniWrapper>
