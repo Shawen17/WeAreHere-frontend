@@ -36,7 +36,7 @@ const Container = styled.div`
 
 const ContactPage = () => {
   return (
-    <div className="ls">
+    <div className="ls contact">
       <Container>
         <Left>
           <Image src="contact_graphics.jpg" alt="contact" />

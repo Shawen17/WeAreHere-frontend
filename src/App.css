@@ -106,8 +106,17 @@
 }
 
 .ls {
-  background: radial-gradient(circle at center, cyan, rgb(77, 136, 212), blue),
+  background: radial-gradient(
+      circle at center,
+      cyan,
+      rgb(77, 136, 212),
+      rgb(44, 44, 184)
+    ),
     100%;
+}
+
+.contact {
+  padding: 100px 20px 30px 20px;
 }
 
 .badge {
