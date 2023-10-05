@@ -179,7 +179,7 @@ const PropertyDetails = (props) => {
   const Handleback = () => {
     navigate(-1);
   };
-  console.log(property);
+
   const handleBooking = async () => {
     if (props.isAuthenticated) {
       const data = new FormData();
