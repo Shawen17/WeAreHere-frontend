@@ -7,7 +7,7 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 50%;
+  flex: 30%;
 `;
 
 const Right = styled.div`
@@ -15,7 +15,7 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 50%;
+  flex: 70%;
 `;
 
 const Image = styled.img`
@@ -42,7 +42,7 @@ const ContactPage = () => {
           <Image src="contact_graphics.jpg" alt="contact" />
         </Left>
         <Right>
-          <ContactForm />
+          <ContactForm style={{ width: "100%" }} />
         </Right>
       </Container>
     </div>
