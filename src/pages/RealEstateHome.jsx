@@ -167,7 +167,7 @@ const RealEstateHome = (props) => {
     if (inputs) {
       navigate("/properties", { state: inputs });
     } else {
-      navigate("/properties", { state: null });
+      navigate("/properties");
     }
   };
 
@@ -218,7 +218,7 @@ const RealEstateHome = (props) => {
               </Select>
             </SearchContainer>
 
-            <Button onClick={handleFilter}>
+            <Button onClick={() => handleFilter}>
               Search <SearchIcon style={{ marginLeft: 5 }} />
             </Button>
           </FilterArea>
