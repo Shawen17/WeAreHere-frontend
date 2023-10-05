@@ -127,6 +127,12 @@
   margin-top: 80px;
 }
 
+@media screen and (max-width: 568px) {
+  .contact {
+    padding: 50px 5px 20px 5px;
+  }
+}
+
 .badge {
   font-size: 16px;
   display: flex;

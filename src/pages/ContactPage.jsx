@@ -26,12 +26,16 @@ const Image = styled.img`
 `;
 
 const Container = styled.div`
-  padding: 90px 20px 30px 20px;
+  padding: 50px 20px 30px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: whitesmoke;
   border-radius: 8px;
+
+  @media screen and (max-width: 568px) {
+    padding: 40px 5px 20px 5px;
+  }
 `;
 
 const ContactPage = () => {
