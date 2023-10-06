@@ -26,7 +26,7 @@ const Image = styled.img`
 `;
 
 const Container = styled.div`
-  padding: 50px 20px 30px 20px;
+  padding: 30px 20px 30px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +35,13 @@ const Container = styled.div`
 
   @media screen and (max-width: 568px) {
     padding: 40px 5px 20px 5px;
+
+    ${Left} {
+      flex: 0%;
+    }
+    ${Right} {
+      flex: 100%;
+    }
   }
 `;
 
