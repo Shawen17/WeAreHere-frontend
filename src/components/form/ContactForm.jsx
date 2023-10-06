@@ -29,6 +29,7 @@ const TextArea = styled.textarea`
   justify-content: flex-start;
   padding: 5px 10px 10px 10px;
   border-radius: 4px;
+  border: 0.5px solid #18a558;
   width: 100%;
 
   &:focus {
