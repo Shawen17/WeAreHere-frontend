@@ -19,7 +19,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 90px 15px 0px 15px;
+  margin: 40px 15px 0px 15px;
   align-items: center;
   justify-content: centre;
   color: #126180;

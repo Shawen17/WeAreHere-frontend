@@ -47,7 +47,7 @@ const Container = styled.div`
 
 const ContactPage = () => {
   return (
-    <div className="contact">
+    <div className="contact activation-load">
       <Container>
         <Left>
           <Image src="contact_graphics.jpg" alt="contact" />

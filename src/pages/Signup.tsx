@@ -14,7 +14,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="ls">
+    <div className="contact">
       <div className="signup">
         <Badge
           className="badge"
