@@ -178,7 +178,7 @@ const RealEstateHome = (props) => {
 
   return (
     <div>
-      <Container>
+      <Container style={{ marginTop: 20 }}>
         {props.admin === "real estate" && (
           <Admin>
             <Link to="/admin/real-estate" className="nav-item nav-link">
