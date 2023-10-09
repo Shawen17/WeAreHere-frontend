@@ -64,7 +64,7 @@ const EditBookingForm = (props) => {
         Accept: "application/json",
       },
     };
-    console.log(props.status);
+
     if (props.status === "on") {
       try {
         await axios.put(
