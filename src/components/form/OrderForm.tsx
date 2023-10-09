@@ -36,8 +36,9 @@ const TextArea = styled.textarea`
   width: 100%;
 
   &:focus {
-    border: 2px solid #126180;
-    color: #126180;
+    outline: none;
+    border-color: #00b894;
+    box-shadow: 0 0 10px #00b894;
   }
 `;
 
