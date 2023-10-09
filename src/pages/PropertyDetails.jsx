@@ -206,6 +206,7 @@ const PropertyDetails = (props) => {
         navigate("/booking-confirmed");
       } catch (error) {
         setError("something went wrong, try again");
+        navigate("/login/?next=/properties", { state: "/properties" });
       }
     } else {
       navigate("/login/?next=/properties", { state: "/properties" });
