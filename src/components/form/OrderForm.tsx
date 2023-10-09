@@ -89,7 +89,7 @@ const OrderForm = (props: any) => {
   };
 
   return (
-    <Container style={{ backgroundColor: "black" }}>
+    <Container style={{ backgroundColor: "black", marginTop: 80 }}>
       <FormDisplay style={{ borderRadius: "4px" }}>
         <h5>Make booking for {service} service</h5>
         <Form onSubmit={handleSubmit}>
