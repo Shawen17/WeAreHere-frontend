@@ -95,7 +95,8 @@ export const MiniContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction @media screen and (max-width: 340px) {
+
+  @media screen and (max-width: 343px) {
     flex-direction: column;
   }
 `;
