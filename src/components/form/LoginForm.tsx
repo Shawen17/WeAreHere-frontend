@@ -23,6 +23,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: centre;
   color: #126180;
+
+  @media screen and (max-width: 568px) {
+    margin: 40px 5px 10px 5px;
+  }
 `;
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
