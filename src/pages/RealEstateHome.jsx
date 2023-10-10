@@ -218,7 +218,7 @@ const RealEstateHome = (props) => {
               </Select>
             </SearchContainer>
 
-            <Button onClick={() => handleFilter}>
+            <Button onClick={handleFilter}>
               Search <SearchIcon style={{ marginLeft: 5 }} />
             </Button>
           </FilterArea>
