@@ -317,7 +317,7 @@
   display: none;
 }
 
-@media screen and (max-width: 482px) {
+@media screen and (max-width: 648px) {
   .nav-link {
     color: black;
     font-family: "Bricolage Grotesque", sans-serif;

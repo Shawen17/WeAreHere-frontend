@@ -18,7 +18,7 @@ const Container = styled.div`
   width: 100vw;
   padding: 15px;
 
-  @media screen and (max-width: 482px) {
+  @media screen and (max-width: 568px) {
     background: whitesmoke;
     color: black;
     ${Line} {
