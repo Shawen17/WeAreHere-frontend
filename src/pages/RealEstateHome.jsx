@@ -46,7 +46,7 @@ const SearchContainer = styled.div`
   flex: 25%;
   margin: 10px;
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 568px) {
     flex: 100%;
   }
 `;
@@ -60,7 +60,7 @@ const Left = styled.p`
   font-size: 40px;
   font-weight: bold;
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 568px) {
     flex: 100%;
   }
 `;
@@ -120,7 +120,7 @@ const FilterArea = styled.div`
   margin-top: 20px;
   padding: 0px 20px 0px 20px;
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 568px) {
     padding: 0px 5px 0px 5px;
     width: 90%;
     height: 80px;
@@ -135,7 +135,7 @@ const Property = styled.div`
   margin: 0px 70px 40px 70px;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 568px) {
     margin: 0px 5px 10px 5px;
 
     ${PropertyHead} {
