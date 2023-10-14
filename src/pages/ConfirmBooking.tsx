@@ -30,7 +30,7 @@ const ConfirmBooking = (props: any) => {
   }
 
   return (
-    <Container>
+    <Container style={{ marginTop: 80 }}>
       <Icon>
         <CheckIcon style={{ fontSize: 50, color: "#00BB27" }} />
       </Icon>
