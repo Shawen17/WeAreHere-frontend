@@ -62,8 +62,11 @@ const ProductContainer = styled.div`
   font-size: 13px;
   cursor: pointer;
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 568px) {
     width: 100%;
+  }
+  @media screen and (min-width: 569px) {
+    width: 45%;
   }
 `;
 

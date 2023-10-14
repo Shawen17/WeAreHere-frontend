@@ -12,7 +12,7 @@ const Property = styled.div`
   margin: 80px 100px 40px 100px;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 568px) {
     margin: 80px 0px 0px 0px;
     padding: 0px 10px 0px 10px;
   }
