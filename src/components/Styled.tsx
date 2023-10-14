@@ -9,7 +9,7 @@ export const FormDisplay = styled.div`
   justify-content: center;
   padding: 20px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1100px) {
     padding: 10px;
     width: 80%;
     margin: 0px;
