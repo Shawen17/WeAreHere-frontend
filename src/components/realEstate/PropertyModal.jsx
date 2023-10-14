@@ -68,6 +68,10 @@ const ProductContainer = styled.div`
   @media screen and (min-width: 569px) {
     width: 45%;
   }
+
+  @media screen and (min-width: 1004px) {
+    width: 30%;
+  }
 `;
 
 const Details = styled.div`
