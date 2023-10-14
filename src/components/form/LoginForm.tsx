@@ -84,7 +84,7 @@ const LoginForm: React.FC<PropsFromRedux> = ({
   };
 
   return (
-    <Container className="page-load">
+    <Container className="page-load" style={{ marginTop: 80 }}>
       <Title>Welcome! enter your details </Title>
       {loginFailed ? (
         <div style={{ color: "red" }}>email or password incorrect</div>
