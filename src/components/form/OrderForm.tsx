@@ -204,6 +204,7 @@ const OrderForm = (props: any) => {
           </Label>
           <InputSyled
             required
+            className="white-arrow"
             type="date"
             name="date"
             value={inputs.date ? inputs.date.toISOString().split("T")[0] : ""}
