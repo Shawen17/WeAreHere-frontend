@@ -158,7 +158,7 @@ const AdminForm = (props) => {
 
   return (
     <Container
-      style={{ backgroundColor: "white", borderRadius: 6 }}
+      style={{ backgroundColor: "white", borderRadius: 6, marginTop: 80 }}
       className="page-load"
     >
       <Back>

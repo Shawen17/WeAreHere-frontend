@@ -98,8 +98,8 @@ const EditBookingForm = (props) => {
     width: "100%",
   };
   return (
-    <Container>
-      <Title>Update Booking</Title>
+    <Container style={{ marginTop: 80 }}>
+      <Title style={{ marginBottom: 10 }}>Update Booking</Title>
       <Back>
         <ArrowBackOutlinedIcon style={{ fontSize: 23 }} onClick={Handleback} />
       </Back>

@@ -143,7 +143,9 @@ const EditForm = (props) => {
   };
 
   return (
-    <Container style={{ backgroundColor: "white", borderRadius: 6 }}>
+    <Container
+      style={{ backgroundColor: "white", borderRadius: 6, marginTop: 80 }}
+    >
       <Back>
         <ArrowBackOutlinedIcon style={{ fontSize: 22 }} onClick={Handleback} />
       </Back>
