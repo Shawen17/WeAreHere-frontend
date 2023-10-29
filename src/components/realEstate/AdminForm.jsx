@@ -161,10 +161,11 @@ const AdminForm = (props) => {
       style={{ backgroundColor: "white", borderRadius: 6, marginTop: 80 }}
       className="page-load"
     >
+      <Title style={{ marginBottom: 10 }}>Add New Property</Title>
       <Back>
         <ArrowBackOutlinedIcon style={{ fontSize: 22 }} onClick={Handleback} />
       </Back>
-      <Title>Add New Property</Title>
+
       {added && <h5>Property added successfully!</h5>}
       <h5>{error}</h5>
       <FormDisplay>

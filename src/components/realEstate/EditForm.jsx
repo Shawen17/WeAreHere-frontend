@@ -146,10 +146,11 @@ const EditForm = (props) => {
     <Container
       style={{ backgroundColor: "white", borderRadius: 6, marginTop: 80 }}
     >
+      <Title style={{ marginBottom: 10 }}>Edit Property</Title>
       <Back>
         <ArrowBackOutlinedIcon style={{ fontSize: 22 }} onClick={Handleback} />
       </Back>
-      <Title>Edit Property</Title>
+
       <h5>{error}</h5>
       <FormDisplay>
         <Form style={formDisplay} onSubmit={handleSubmit}>
