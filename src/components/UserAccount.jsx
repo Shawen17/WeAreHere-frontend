@@ -10,7 +10,7 @@ const Container = styled.div`
   background: rgba(0, 0, 0, 0.12);
   padding: 20px 10px 20px 10px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 10px;
   width: 100%;
 `;
@@ -99,7 +99,9 @@ const UserAccount = () => {
         appointments.items.orders.map((order) => (
           <Row key={order.id}>
             <div>date_booked: {handleDate(order.date_booked)}</div>
-            Service: <Service>{order.service}</Service>
+            <div>
+              service: <Service>{order.service}</Service>
+            </div>
             <div>service_date: {handleDate(order.service_date)}</div>
             <div>address: {order.address}</div>
           </Row>
