@@ -58,9 +58,7 @@ export const handleDate = (inputDateString) => {
 const UserAccount = () => {
   const [appointments, setAppointments] = useState({
     items: {
-      orders: [
-        { id: 0, service: "", address: "", date_booked: "", service_date: "" },
-      ],
+      orders: [],
     },
   });
   const navigate = useNavigate();
