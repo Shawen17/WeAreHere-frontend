@@ -39,7 +39,7 @@ const Service = styled.div`
   height: 30px;
   padding: 5px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 `;
 
