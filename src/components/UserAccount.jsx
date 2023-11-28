@@ -99,9 +99,7 @@ const UserAccount = () => {
         appointments.items.orders.map((order) => (
           <Row key={order.id}>
             <div>date_booked: {handleDate(order.date_booked)}</div>
-            <div>
-              service: <Service>{order.service}</Service>
-            </div>
+            <Service>service: {order.service}</Service>
             <div>service_date: {handleDate(order.service_date)}</div>
             <div>address: {order.address}</div>
           </Row>
