@@ -26,6 +26,10 @@ const Row = styled.div`
   // height: 80px;
   font-size: 13px;
   width: 100%;
+
+  @media screen and (max-width: 568px) {
+    flex-direction: column;
+  }
 `;
 
 const Service = styled.div`
