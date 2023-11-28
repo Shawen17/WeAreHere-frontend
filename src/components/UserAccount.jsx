@@ -36,7 +36,7 @@ const Service = styled.div`
   background-color: #648c11;
   color: white;
   border-radius: 6px;
-  height: 30px;
+
   padding: 5px;
   display: flex;
   align-items: flex-start;
