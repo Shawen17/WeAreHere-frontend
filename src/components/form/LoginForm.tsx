@@ -24,7 +24,7 @@ export const Container = styled.div`
   justify-content: centre;
   color: #126180;
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 569px) {
     margin: 40px 5px 10px 5px;
   }
 `;
