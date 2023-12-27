@@ -36,7 +36,7 @@ const Service = styled.div`
   background-color: #648c11;
   color: white;
   border-radius: 6px;
-  padding: 5px;
+  margin: 0px 5px 0px 5px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -46,6 +46,7 @@ const Item = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  margin: 0px 5px 0px 5px;
 `;
 
 export const handleDate = (inputDateString) => {
