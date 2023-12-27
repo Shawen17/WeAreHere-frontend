@@ -158,8 +158,12 @@ const PropertyDetails = (props) => {
       "image6",
     ];
     const result = [];
+    const filteredEntries = Object.entries(property).filter(
+      ([key, value]) => value !== null && value !== undefined
+    );
+    const filteredObject = Object.fromEntries(filteredEntries);
 
-    for (const key in property) {
+    for (const key in filteredObject) {
       if (keysToSearch.some((searchKey) => key.includes(searchKey))) {
         result.push(property[key]);
       }
@@ -235,8 +239,10 @@ const PropertyDetails = (props) => {
             <ReactPlayer
               height="100%"
               width="100%"
+              playing={true}
+              light={`${BASE_URL}${property.image1}`}
+              controls={true}
               url={`${BASE_URL}${property.videofile}`}
-              controls
             />
           </VideoWrapper>
         </MainWrapper>

@@ -406,7 +406,6 @@ const RealEstateAdmin = () => {
                 <TableCell>{row.category}</TableCell>
                 <TableCell>{propertyStatus(row.already_sold)}</TableCell>
                 <TableCell>{`${BASE_URL}${row.videofile}`}</TableCell>
-                <TableCell>{`${BASE_URL}${row.videofile}`}</TableCell>
                 <TableCell>{`${BASE_URL}${row.image1}`}</TableCell>
                 <TableCell>{`${BASE_URL}${row.image2}`}</TableCell>
                 <TableCell>{`${BASE_URL}${row.image3}`}</TableCell>

@@ -395,6 +395,7 @@ const AdminForm = (props) => {
             <Input
               type="file"
               name="videofile"
+              accept="video/mp4"
               onChange={handleFileChange}
               required
             />
@@ -406,6 +407,7 @@ const AdminForm = (props) => {
                 <Input
                   type="file"
                   name="file1"
+                  accept="image/png, image/jpeg, image/jpg"
                   onChange={handleFileChange}
                   required
                 />
@@ -417,6 +419,7 @@ const AdminForm = (props) => {
                 <Input
                   type="file"
                   name="file2"
+                  accept="image/png, image/jpeg, image/jpg"
                   onChange={handleFileChange}
                   required
                 />
@@ -429,6 +432,7 @@ const AdminForm = (props) => {
                 <Input
                   type="file"
                   name="file3"
+                  accept="image/png, image/jpeg, image/jpg"
                   onChange={handleFileChange}
                   required
                 />
@@ -439,6 +443,7 @@ const AdminForm = (props) => {
                 <Input
                   type="file"
                   name="file4"
+                  accept="image/png, image/jpeg, image/jpg"
                   onChange={handleFileChange}
                   required
                 />
@@ -451,6 +456,7 @@ const AdminForm = (props) => {
                 <Input
                   type="file"
                   name="file5"
+                  accept="image/png, image/jpeg, image/jpg"
                   onChange={handleFileChange}
                   required
                 />
@@ -461,6 +467,7 @@ const AdminForm = (props) => {
                 <Input
                   type="file"
                   name="file6"
+                  accept="image/png, image/jpeg, image/jpg"
                   onChange={handleFileChange}
                   required
                 />

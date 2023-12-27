@@ -103,13 +103,13 @@ const EditForm = (props) => {
 
     const data = new FormData();
     data.append("id", property.id);
-    data.append("videofile", inputs.videofile);
-    data.append("image1", inputs.file1);
-    data.append("image2", inputs.file2);
-    data.append("image3", inputs.file3);
-    data.append("image4", inputs.file4);
-    data.append("image5", inputs.file5);
-    data.append("image6", inputs.file6);
+    data.append("videofile", inputs.videofile, inputs.videofile.name);
+    data.append("image1", inputs.file1, inputs.file1.name);
+    data.append("image2", inputs.file2, inputs.file2.name);
+    data.append("image3", inputs.file3, inputs.file3.name);
+    data.append("image4", inputs.file4, inputs.file4.name);
+    data.append("image5", inputs.file5, inputs.file5.name);
+    data.append("image6", inputs.file6, inputs.file6.name);
     data.append("email", props.email);
     data.append("price", inputs.price);
     data.append("category", inputs.category);
@@ -374,43 +374,78 @@ const EditForm = (props) => {
           </MiniContainer>
           <Label htmlFor="videofile">Videofile</Label>
           <SearchContainer>
-            <Input type="file" name="videofile" onChange={handleFileChange} />
+            <Input
+              type="file"
+              accept="video/mp4"
+              name="videofile"
+              onChange={handleFileChange}
+            />
           </SearchContainer>
           <Label htmlFor="images">Images</Label>
           <MiniContainer>
             <Box>
               <SearchContainer>
-                <Input type="file" name="file1" onChange={handleFileChange} />
+                <Input
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg"
+                  name="file1"
+                  onChange={handleFileChange}
+                />
               </SearchContainer>
             </Box>
 
             <Box>
               <SearchContainer>
-                <Input type="file" name="file2" onChange={handleFileChange} />
+                <Input
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg"
+                  name="file2"
+                  onChange={handleFileChange}
+                />
               </SearchContainer>
             </Box>
           </MiniContainer>
           <MiniContainer>
             <Box>
               <SearchContainer>
-                <Input type="file" name="file3" onChange={handleFileChange} />
+                <Input
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg"
+                  name="file3"
+                  onChange={handleFileChange}
+                />
               </SearchContainer>
             </Box>
             <Box>
               <SearchContainer>
-                <Input type="file" name="file4" onChange={handleFileChange} />
+                <Input
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg"
+                  name="file4"
+                  onChange={handleFileChange}
+                />
               </SearchContainer>
             </Box>
           </MiniContainer>
           <MiniContainer>
             <Box>
               <SearchContainer>
-                <Input type="file" name="file5" onChange={handleFileChange} />
+                <Input
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg"
+                  name="file5"
+                  onChange={handleFileChange}
+                />
               </SearchContainer>
             </Box>
             <Box>
               <SearchContainer>
-                <Input type="file" name="file6" onChange={handleFileChange} />
+                <Input
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg"
+                  name="file6"
+                  onChange={handleFileChange}
+                />
               </SearchContainer>
             </Box>
           </MiniContainer>
