@@ -18,7 +18,7 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   box-shadow: 4px 3px 3px 3px rgba(0, 31, 26, 0.36);
   margin: 5px;
   padding: 5px;
