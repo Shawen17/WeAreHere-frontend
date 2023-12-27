@@ -36,11 +36,16 @@ const Service = styled.div`
   background-color: #648c11;
   color: white;
   border-radius: 6px;
-
   padding: 5px;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
+`;
+
+const Item = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 export const handleDate = (inputDateString) => {
@@ -96,10 +101,10 @@ const UserAccount = () => {
       {appointments.items.orders.length > 0 ? (
         appointments.items.orders.map((order) => (
           <Row key={order.id}>
-            <div>date_booked: {handleDate(order.date_booked)}</div>
+            <Item>date_booked: {handleDate(order.date_booked)}</Item>
             <Service>service: {order.service}</Service>
-            <div>service_date: {handleDate(order.service_date)}</div>
-            <div>address: {order.address}</div>
+            <Item>service_date: {handleDate(order.service_date)}</Item>
+            <Item>address: {order.address}</Item>
           </Row>
         ))
       ) : (
