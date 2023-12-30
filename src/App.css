@@ -608,54 +608,40 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   height: 80vh;
   width: 100%;
-  background-image: url("./img/house1.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  animation: slideshow 24s linear infinite;
+  background-position: center center;
+  animation: slideshow 16s infinite;
 }
 
 @keyframes slideshow {
-  0% {
-    /* background-position-x: 100%; */
-    background-image: url("./img/house1.jpg");
-  }
-  15% {
-    /* background-position-x: 0%; */
+  0%,
+  100% {
     background-image: url("./img/house1.jpg");
   }
   25% {
-    /* background-position-x: 0%; */
     background-image: url("./img/house2.jpg");
   }
   50% {
-    /* background-position-x: 100%; */
     background-image: url("./img/house3.jpg");
   }
   75% {
-    /* background-position-x: 0%; */
-    background-image: url("./img/house3.jpg");
-  }
-  100% {
-    /* background-position-x: 0%; */
     background-image: url("./img/house4.jpg");
   }
 }
 
 @-webkit-keyframes slideshow {
-  0% {
-    /* background-position-x: 100%; */
+  0%,
+  100% {
     background-image: url("./img/house1.jpg");
   }
   25% {
-    /* background-position-x: 0%; */
     background-image: url("./img/house2.jpg");
   }
   50% {
-    /* background-position-x: 100%; */
     background-image: url("./img/house3.jpg");
   }
-  100% {
-    /* background-position-x: 0% 0; */
+  75% {
     background-image: url("./img/house4.jpg");
   }
 }
