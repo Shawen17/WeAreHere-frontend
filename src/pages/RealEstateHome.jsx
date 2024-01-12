@@ -231,20 +231,8 @@ const RealEstateHome = (props) => {
       <Property>
         <PropertyHead>Our choice of popular real estate</PropertyHead>
         <TopProperties />
-        <div className="button-con">
-          <Button
-            style={{
-              height: "100%",
-              width: "100%",
-              backgroundColor: "transparent",
-              color: "#0eb3f4",
-              textTransform: "uppercase",
-              fontSize: "22px",
-            }}
-            onClick={handleSubmit}
-          >
-            See More
-          </Button>
+        <div className="button-con" onClick={handleSubmit}>
+          See More
         </div>
 
         <PropertyHead style={{ marginTop: 100 }}>
