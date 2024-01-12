@@ -112,8 +112,8 @@ const PropertyModal = (props) => {
   const handleGrow = (event) => {
     // const x = event.pageX;
     // const y = event.pageY;
-    const x = event.clientX - 200;
-    const y = event.clientY - 200;
+    const x = event.clientX - 100;
+    const y = event.clientY - 100;
     setTestPosition({ ...position, top: y, left: x, display: "block" });
     setTimeout(() => setTestPosition({ ...position, display: "none" }), 1000);
   };
