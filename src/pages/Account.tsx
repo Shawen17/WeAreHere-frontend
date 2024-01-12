@@ -1,4 +1,3 @@
-import React from "react";
 import SideMenu from "../components/SideMenu";
 import UserAccount from "../components/UserAccount";
 

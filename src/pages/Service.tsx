@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Header, Title, Sub } from "./About";
 import ServiceBox from "../components/ServiceBox";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import "../components/realEstate/Property.css";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";

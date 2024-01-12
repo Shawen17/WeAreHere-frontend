@@ -1,4 +1,3 @@
-import React from "react";
 import Properties from "../components/realEstate/Properties";
 import { useLocation } from "react-router-dom";
 

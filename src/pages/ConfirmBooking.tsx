@@ -1,4 +1,3 @@
-import React from "react";
 import CheckIcon from "@mui/icons-material/Check";
 import { Container } from "../components/form/LoginForm";
 import styled from "styled-components";

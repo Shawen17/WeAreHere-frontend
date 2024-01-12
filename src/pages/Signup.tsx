@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SignupForm from "../components/form/SignupForm";
 import SignupFormPartner from "../components/form/SignupFormPartner";
 import { Badge } from "reactstrap";
