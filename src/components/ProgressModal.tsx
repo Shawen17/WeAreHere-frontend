@@ -1,12 +1,10 @@
-import * as React from "react";
-
+import { useState } from "react";
 import { Button } from "./Styled";
-
 import Modal from "@mui/material/Modal";
 import CircularProgress from "@mui/material/CircularProgress";
 
 export default function ProgressModal() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
   };

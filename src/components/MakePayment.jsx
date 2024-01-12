@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Text, Icon, IconTextContainer, Title } from "./Subscription";
 import { PaystackButton } from "react-paystack";
 import { useLocation } from "react-router-dom";

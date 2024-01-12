@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
-
 import FavoriteBorderTwoToneIcon from "@mui/icons-material/FavoriteBorderTwoTone";
 import { useNavigate } from "react-router-dom";
 import "./Property.css";
@@ -153,7 +152,11 @@ const PropertyModal = (props) => {
               justifyContent: "center",
             }}
           >
-            <ProductImg src={`${BASE_URL}${property.image1}`} alt="property" />
+            <ProductImg
+              loading="lazy"
+              src={`${BASE_URL}${property.image1}`}
+              alt="property"
+            />
           </div>
         </Circle>
 

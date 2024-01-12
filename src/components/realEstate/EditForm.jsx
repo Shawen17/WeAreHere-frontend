@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import states from "../State";
 import { signup } from "../../actions/auth";
 import { connect } from "react-redux";

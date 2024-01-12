@@ -5,15 +5,19 @@ import styled from "styled-components";
 import ClickAwayListener from "react-click-away-listener";
 import NavMenu from "./NavMenu";
 
+interface ContainerProps {
+  hasScrolled: boolean;
+}
+
 const Line = styled.div`
   height: 2px;
   color: white;
   background-color: white;
 `;
 
-const Container = styled.div`
+const Container = styled.div<ContainerProps>`
   height: 60px;
-  background: transparent;
+  background: ${(props) => (props.hasScrolled ? "whitesmoke" : "transparent")};
   font-family: "Bricolage Grotesque", sans-serif;
   width: 100vw;
   padding: 15px;
@@ -42,7 +46,11 @@ const Brand = styled.h1`
   }
 `;
 
-const NavBar = () => {
+interface NavBarProps {
+  scrolled: boolean;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ scrolled }) => {
   const [toggle, setToggle] = useState(false);
 
   const toggleModal = () => {
@@ -61,7 +69,7 @@ const NavBar = () => {
           left: 0,
         }}
       >
-        <Container>
+        <Container hasScrolled={scrolled}>
           <Wrapper>
             <Link className="mr-auto nav-link" to="/">
               <Brand>WeAreHere</Brand>

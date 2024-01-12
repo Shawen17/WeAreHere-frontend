@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
 import { convert } from "./realEstate/PropertyModal";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";

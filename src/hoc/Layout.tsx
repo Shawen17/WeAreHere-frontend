@@ -1,10 +1,29 @@
 import NavBar from "../components/NavBar";
+import React, { ReactNode, useEffect, useState } from "react";
 
-const Layout = (props: any) => {
+interface MyComponentProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<MyComponentProps> = ({ children }) => {
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 120);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <NavBar />
-      {props.children}
+      <NavBar scrolled={scrolled} />
+      {children}
     </>
   );
 };

@@ -12,6 +12,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@twicpics/components": "^0.26.0",
     "@types/babel__core": "^7.20.1",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.39",

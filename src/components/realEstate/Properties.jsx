@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import PropertyModal from "./PropertyModal";
@@ -44,7 +44,7 @@ const Properties = (props) => {
 
         setData({ items: response.data });
       } catch (error) {
-        setError("something went wrong");
+        setError("Unable to load resource from server");
       }
     };
 
@@ -57,22 +57,9 @@ const Properties = (props) => {
       filteredProperty = data.items.orders;
 
       if (condition) {
-        if (condition.state && condition.category) {
-          filteredProperty = data.items.orders.filter(function (property) {
-            return (
-              property.category === condition.category &&
-              property.state === condition.state
-            );
-          });
-        } else if (condition.state) {
-          filteredProperty = data.items.orders.filter(function (property) {
-            return property.state === condition.state;
-          });
-        } else if (condition.category) {
-          filteredProperty = data.items.orders.filter(function (property) {
-            return property.category === condition.category;
-          });
-        }
+        filteredProperty = data.items.orders.filter((item) =>
+          Object.keys(condition).every((key) => item[key] === condition[key])
+        );
       }
       setProperties(filteredProperty);
       const count = filteredProperty.length;
@@ -80,7 +67,7 @@ const Properties = (props) => {
     }
   }, [condition, data.items.orders]);
 
-  const handleChange = (event, value) => {
+  const handleChange = (value) => {
     setCurrentPage(value);
   };
 
@@ -91,31 +78,33 @@ const Properties = (props) => {
   }, [currentPage, properties]);
 
   return (
-    <div>
-      <Property>
-        <h6>{error}</h6>
-        {currentData.length > 0 ? (
-          currentData.map((item) => {
-            return <PropertyModal key={item.id} property={item} />;
-          })
-        ) : (
-          <div className="middle">
-            <CircularProgress color="success" />
+    <>
+      <h6 style={{ textAlign: "center", margin: "20% auto" }}>{error}</h6>
+      {currentData.length > 0 ? (
+        <>
+          <Property>
+            {currentData.map((item) => {
+              return <PropertyModal key={item.id} property={item} />;
+            })}
+          </Property>
+          <div className="pagination" style={{ marginBottom: 20 }}>
+            <Pagination
+              count={pages}
+              page={currentPage}
+              onChange={handleChange}
+              size="small"
+              color="secondary"
+              showFirstButton
+              showLastButton
+            />
           </div>
-        )}
-      </Property>
-      <div className="pagination" style={{ marginBottom: 20 }}>
-        <Pagination
-          count={pages}
-          page={currentPage}
-          onChange={handleChange}
-          size="small"
-          color="secondary"
-          showFirstButton
-          showLastButton
-        />
-      </div>
-    </div>
+        </>
+      ) : (
+        <div className="middle">
+          <CircularProgress color="success" />
+        </div>
+      )}
+    </>
   );
 };
 
