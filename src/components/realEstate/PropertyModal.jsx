@@ -110,8 +110,8 @@ const PropertyModal = (props) => {
   const navigate = useNavigate();
 
   const handleGrow = (event) => {
-    const x = event.clientX;
-    const y = event.clientY;
+    const x = event.pageX;
+    const y = event.pageY;
     // const x = event.clientX;
     // const y = event.clientY+200;
     setTestPosition({ ...position, top: y, left: x, display: "block" });
