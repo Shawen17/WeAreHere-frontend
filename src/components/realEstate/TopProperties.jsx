@@ -37,7 +37,7 @@ const TopProperties = () => {
 
         setData({ items: response.data });
       } catch (error) {
-        setError("something went wrong");
+        setError("Unable to load resource from server");
       }
     };
 
@@ -45,18 +45,20 @@ const TopProperties = () => {
   }, []);
 
   return (
-    <Property>
+    <>
       <h6>{error}</h6>
       {data.items.orders.length > 0 ? (
-        data.items.orders.slice(0, 6).map((item) => {
-          return <PropertyModal key={item.id} property={item} />;
-        })
+        <Property>
+          {data.items.orders.slice(0, 6).map((item) => {
+            return <PropertyModal key={item.id} property={item} />;
+          })}
+        </Property>
       ) : (
-        <div className="middle">
+        <>
           <CircularProgress color="success" />
-        </div>
+        </>
       )}
-    </Property>
+    </>
   );
 };
 

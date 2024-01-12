@@ -425,9 +425,9 @@ const RealEstateAdmin = () => {
         </Table>
       </TableContainer>
     ) : (
-      <div className="middle">
+      <>
         <CircularProgress color="success" />
-      </div>
+      </>
     );
 
   const Bookings = (

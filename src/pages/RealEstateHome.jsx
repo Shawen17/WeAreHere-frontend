@@ -37,7 +37,7 @@ const Button = styled.button`
 `;
 const SearchContainer = styled.div`
   margin-bottom: 5px;
-  border: 0.5px solid black;
+  border: 2px solid grey;
   border-radius: 6px;
   align-items: center;
   justify-content: center;
@@ -45,6 +45,10 @@ const SearchContainer = styled.div`
   height: 30px;
   flex: 25%;
   margin: 10px;
+
+  &: hover {
+    border: 4px solid #0eb3f4;
+  }
 
   @media screen and (max-width: 568px) {
     flex: 100%;
