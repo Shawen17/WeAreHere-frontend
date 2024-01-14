@@ -71,7 +71,7 @@ export const Input = styled.input`
   background-color: transparent;
   border-style: none;
   ::placeholder {
-    font-size: 1.2em;
+    font-size: 0.4em;
     font-style: italic;
   }
   &:focus {
