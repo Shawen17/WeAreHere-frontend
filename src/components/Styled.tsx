@@ -47,7 +47,7 @@ export const Button = styled.button`
 
 export const SearchContainer = styled.div`
   margin-bottom: 5px;
-  border: 0.5px solid #18a558;
+  border: 2px solid #18a558;
   border-radius: 6px;
   align-items: center;
   justify-content: center;
@@ -61,14 +61,13 @@ export const SearchContainer = styled.div`
 `;
 
 export const Input = styled.input`
-  margin-left: 10px;
   width: 100%;
   border: none;
   background-color: transparent;
   border-style: none;
   &:focus {
     outline: none;
-    border-color: #00b894;
+    border: 3px solid #00b894;
     box-shadow: 0 0 10px #00b894;
   }
 `;
