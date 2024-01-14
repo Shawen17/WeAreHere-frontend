@@ -6,6 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 import services from "../Services";
 import { Container } from "./LoginForm";
 import { Form } from "reactstrap";
+import { Checkbox } from "@mui/material";
 import {
   Label,
   Input,
@@ -305,12 +306,8 @@ const SignupFormPartner: React.FC = (props: any) => {
           </SearchContainer>
           <div>
             <Label>
-              <input
-                type="checkbox"
-                id="terms"
-                onClick={() => setClicked(!clicked)}
-              />
-              I agree with the terms and conditions
+              <Checkbox id="terms" onClick={() => setClicked(!clicked)} />I
+              agree with the terms and conditions
             </Label>
           </div>
           <Button type="submit" disabled={!checkSubmit()}>
