@@ -70,8 +70,9 @@ export const Input = styled.input`
   border-radius: 6px;
   background-color: transparent;
   border-style: none;
+
   ::placeholder {
-    font-size: 0.4em;
+    font-size: 10px;
     font-style: italic;
   }
   &:focus {
