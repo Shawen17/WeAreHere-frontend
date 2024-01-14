@@ -56,7 +56,7 @@ export const SearchContainer = styled.div`
   width: 100%;
 
   &:hover {
-    border: none;
+    border: 0.5px;
   }
 
   @media screen and (max-width: 600px) {
