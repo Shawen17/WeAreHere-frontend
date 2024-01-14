@@ -73,7 +73,7 @@ export const Input = styled.input`
   &:focus {
     outline: none;
     border: 3px solid #00b894;
-    border-right:
+    border-right: none;
     box-shadow: 0 0 10px #00b894;
   }
 `;
