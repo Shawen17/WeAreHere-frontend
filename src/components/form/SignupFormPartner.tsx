@@ -157,7 +157,7 @@ const SignupFormPartner: React.FC = (props: any) => {
               <Label htmlFor="first_name">First Name</Label>
               <SearchContainer>
                 <Input
-                  placeholder="First Name"
+                  placeholder="first name"
                   type="text"
                   name="first_name"
                   value={inputs.first_name || ""}
@@ -169,7 +169,7 @@ const SignupFormPartner: React.FC = (props: any) => {
               <Label htmlFor="last_name">Last Name</Label>
               <SearchContainer>
                 <Input
-                  placeholder="Last Name"
+                  placeholder="last name"
                   type="text"
                   name="last_name"
                   value={inputs.last_name || ""}
@@ -181,7 +181,7 @@ const SignupFormPartner: React.FC = (props: any) => {
           <Label htmlFor="email">Email</Label>
           <SearchContainer>
             <Input
-              placeholder="Email"
+              placeholder="email"
               type="email"
               name="email"
               value={inputs.email || ""}
@@ -192,7 +192,7 @@ const SignupFormPartner: React.FC = (props: any) => {
           <Label htmlFor="business_name">Business Name</Label>
           <SearchContainer>
             <Input
-              placeholder="registered business name"
+              placeholder="business name"
               type="text"
               name="business_name"
               value={inputs.business_name || ""}
@@ -203,7 +203,7 @@ const SignupFormPartner: React.FC = (props: any) => {
           <Label htmlFor="business_address">Business Address</Label>
           <SearchContainer>
             <Input
-              placeholder="registered business address"
+              placeholder="business address"
               type="text"
               name="business_address"
               value={inputs.business_address || ""}
@@ -215,7 +215,7 @@ const SignupFormPartner: React.FC = (props: any) => {
               <Label htmlFor="phone_number">Phone Number</Label>
               <SearchContainer>
                 <Input
-                  placeholder="Phone Number"
+                  placeholder="phone number"
                   type="number"
                   name="phone_number"
                   value={inputs.phone_number || ""}

@@ -116,7 +116,7 @@ const SignupForm: React.FC = (props: any) => {
               <Label htmlFor="first_name">First Name</Label>
               <SearchContainer>
                 <Input
-                  placeholder="First Name"
+                  placeholder="first name"
                   type="text"
                   name="first_name"
                   value={inputs.first_name || ""}
@@ -129,7 +129,7 @@ const SignupForm: React.FC = (props: any) => {
               <SearchContainer>
                 <Input
                   placeholder="
-                  Last Name"
+                  last name"
                   type="text"
                   name="last_name"
                   value={inputs.last_name || ""}
@@ -142,7 +142,7 @@ const SignupForm: React.FC = (props: any) => {
           <Label htmlFor="email">Email</Label>
           <SearchContainer>
             <Input
-              placeholder="Email"
+              placeholder="email"
               type="email"
               name="email"
               value={inputs.email || ""}
@@ -154,7 +154,7 @@ const SignupForm: React.FC = (props: any) => {
               <Label htmlFor="phone_number">Phone Number</Label>
               <SearchContainer>
                 <Input
-                  placeholder="Phone Number"
+                  placeholder="phone number"
                   type="number"
                   name="phone_number"
                   value={inputs.phone_number || ""}
