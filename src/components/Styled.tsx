@@ -122,12 +122,12 @@ export const Select = styled.select`
 
   width: 100%;
   border: none;
-  background-color: transparent;
+  background-color: whitesmoke;
   border-style: none;
   &:focus {
     outline: none;
     border-color: none;
     border: none;
-    background-color: transparent;
+    background-color: whitesmoke;
   }
 `;
