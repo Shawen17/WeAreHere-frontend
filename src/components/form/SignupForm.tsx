@@ -166,7 +166,6 @@ const SignupForm: React.FC = (props: any) => {
               <Label htmlFor="state">State</Label>
               <SearchContainer>
                 <Select
-                  className="white-arrow"
                   name="state"
                   value={inputs.state || ""}
                   onChange={handleChange}

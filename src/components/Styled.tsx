@@ -118,16 +118,14 @@ export const Box = styled.div`
 `;
 
 export const Select = styled.select`
-  margin-left: 10px;
-
   width: 100%;
   border: none;
-  background-color: whitesmoke;
+  background-color: transparent;
   border-style: none;
   &:focus {
     outline: none;
     border-color: none;
     border: none;
-    background-color: whitesmoke;
+    background-color: transparent;
   }
 `;
