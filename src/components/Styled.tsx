@@ -63,11 +63,17 @@ export const SearchContainer = styled.div`
 export const Input = styled.input`
   width: 100%;
   border: none;
+  border-radius: 6px;
   background-color: transparent;
   border-style: none;
+  ::placeholder {
+    font-size: 1.2em;
+    font-style: italic;
+  }
   &:focus {
     outline: none;
     border: 3px solid #00b894;
+    border-right:
     box-shadow: 0 0 10px #00b894;
   }
 `;

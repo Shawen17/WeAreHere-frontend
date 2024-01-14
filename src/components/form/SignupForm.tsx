@@ -128,7 +128,8 @@ const SignupForm: React.FC = (props: any) => {
               <Label htmlFor="last_name">Last Name</Label>
               <SearchContainer>
                 <Input
-                  placeholder="Last Name"
+                  placeholder="
+                  Last Name"
                   type="text"
                   name="last_name"
                   value={inputs.last_name || ""}
