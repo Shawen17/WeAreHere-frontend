@@ -764,25 +764,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   0%,
   20% {
     transform: scale(0.5);
-    box-shadow: 10px 0px 5px 5px blue;
+    box-shadow: 10px 5px 5px 5px rgba(135, 206, 235, 0.5);
   }
   20%,
   40% {
     transform: scale(0.8);
-    box-shadow: 10px 0px 5px 5px blue;
+    box-shadow: 5px rgba(202, 197, 197, 0.8);
   }
   40%,
   60% {
     transform: scale(1);
-    box-shadow: 10px 0px 5px 5px blue;
+    box-shadow: 10px 5px 5px 5px rgba(59, 242, 59, 0.3);
   }
   60%,
   80% {
     transform: scale(1.2);
+    box-shadow: 10px 5px 5px 5px rgba(59, 242, 59, 0.3);
   }
   80%,
   100% {
     transform: scale(1.1);
+    box-shadow: 10px 5px 5px 5px rgba(59, 242, 59, 0.6);
   }
   100%,
   0% {
