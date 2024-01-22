@@ -18,9 +18,10 @@ const Greetings = styled.h5`
 `;
 
 const Image = styled.img`
-  width: 70%;
-  height: 50%;
+  width: 30%;
+  height: 40%;
   margin: 10px;
+  border-radius: 50% 50%;
 `;
 
 const ConfirmBooking = (props: any) => {
