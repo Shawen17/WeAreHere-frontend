@@ -39,7 +39,9 @@ const ConfirmBooking = (props: any) => {
         {capitalizeLetter(props.lastName)}
       </Greetings>
       <h6 className="mt-2">we will contact you very soon</h6>
-      <Image src="/deal.jpg" alt="deal" />
+      <div className="confirm">
+        <Image src="/deal.jpg" alt="deal" />
+      </div>
     </Container>
   );
 };

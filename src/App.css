@@ -752,3 +752,70 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 35px;
   width: 50%;
 }
+
+/* confirmation page */
+
+.confirm {
+  animation-name: confirmpop;
+  animation: confirmpop 2s ease-in-out 2;
+}
+
+@keyframes confirmpop {
+  0%,
+  20% {
+    transform: scale(0.5);
+    box-shadow: 10px 0px 5px 5px blue;
+  }
+  20%,
+  40% {
+    transform: scale(0.8);
+    box-shadow: 10px 0px 5px 5px blue;
+  }
+  40%,
+  60% {
+    transform: scale(1);
+    box-shadow: 10px 0px 5px 5px blue;
+  }
+  60%,
+  80% {
+    transform: scale(1.2);
+  }
+  80%,
+  100% {
+    transform: scale(1.1);
+  }
+  100%,
+  0% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes confirmpop {
+  0%,
+  20% {
+    transform: scale(0.5);
+    box-shadow: 10px 0px 5px 5px blue;
+  }
+  20%,
+  40% {
+    transform: scale(0.8);
+    box-shadow: 10px 0px 5px 5px blue;
+  }
+  40%,
+  60% {
+    transform: scale(1);
+    box-shadow: 10px 0px 5px 5px blue;
+  }
+  60%,
+  80% {
+    transform: scale(1.2);
+  }
+  80%,
+  100% {
+    transform: scale(1.1);
+  }
+  100%,
+  0% {
+    transform: scale(1);
+  }
+}
