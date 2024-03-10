@@ -154,7 +154,8 @@ const PropertyModal = (props) => {
           >
             <ProductImg
               loading="lazy"
-              src={`${BASE_URL}${property.image1}`}
+              // src={`${BASE_URL}${property.image1}`}
+              src={`https://shawenmedia.s3.eu-north-1.amazonaws.com/media/${property.image1}`}
               alt="property"
             />
           </div>
