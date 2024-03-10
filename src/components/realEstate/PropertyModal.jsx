@@ -3,7 +3,7 @@ import styled from "styled-components";
 import FavoriteBorderTwoToneIcon from "@mui/icons-material/FavoriteBorderTwoTone";
 import { useNavigate } from "react-router-dom";
 import "./Property.css";
-import { BASE_URL } from "../Api";
+// import { BASE_URL } from "../Api";
 import BedOutlinedIcon from "@mui/icons-material/BedOutlined";
 import BathtubOutlinedIcon from "@mui/icons-material/BathtubOutlined";
 import CountertopsOutlinedIcon from "@mui/icons-material/CountertopsOutlined";
