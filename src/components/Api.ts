@@ -8,6 +8,6 @@ const api = axios.create({
 
 export default api;
 
-export const BASE_URL = `${process.env.REACT_APP_BASE_URL}
+export const BASE_URL = `${process.env.REACT_APP_BASE_URL}`
 // export const BASE_URL = "http://13.53.97.55:8000";
 // export const BASE_URL = "http://localhost:8000";
