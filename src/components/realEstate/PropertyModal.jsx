@@ -3,7 +3,6 @@ import styled from "styled-components";
 import FavoriteBorderTwoToneIcon from "@mui/icons-material/FavoriteBorderTwoTone";
 import { useNavigate } from "react-router-dom";
 import "./Property.css";
-// import { BASE_URL } from "../Api";
 import BedOutlinedIcon from "@mui/icons-material/BedOutlined";
 import BathtubOutlinedIcon from "@mui/icons-material/BathtubOutlined";
 import CountertopsOutlinedIcon from "@mui/icons-material/CountertopsOutlined";
@@ -154,8 +153,7 @@ const PropertyModal = (props) => {
           >
             <ProductImg
               loading="lazy"
-              // src={`${BASE_URL}${property.image1}`}
-              src={`https://shawenmedia.s3.eu-north-1.amazonaws.com/media/${property.image1}`}
+              src={`${property.image1}`}
               alt="property"
             />
           </div>

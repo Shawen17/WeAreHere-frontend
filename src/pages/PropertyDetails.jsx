@@ -3,7 +3,6 @@ import styled from "styled-components";
 import "../components/realEstate/Property.css";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import { connect } from "react-redux";
-import { BASE_URL } from "../components/Api";
 import { useLocation, useNavigate } from "react-router-dom";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import { convert } from "../components/realEstate/PropertyModal";
@@ -72,7 +71,7 @@ const ImageContainer = styled.div`
   border-radius: 4px;
   margin-bottom: 10px;
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 568px) {
     ${MIniWrapper} {
       width: 30%;
       padding: 10px;
@@ -226,7 +225,7 @@ const PropertyDetails = (props) => {
         <MIniWrapper>
           {images.map((item, index) => (
             <MiniImage
-              src={`${BASE_URL}${item}`}
+              src={`${item}`}
               key={index}
               onClick={() => handleClick(index)}
               alt="property"
@@ -234,15 +233,15 @@ const PropertyDetails = (props) => {
           ))}
         </MIniWrapper>
         <MainWrapper>
-          <MainImage src={`${BASE_URL}${sliderData}`} alt="property" />
+          <MainImage src={`${sliderData}`} alt="property" />
           <VideoWrapper>
             <ReactPlayer
               height="100%"
               width="100%"
               playing={true}
-              light={`${BASE_URL}${property.image1}`}
+              light={`${property.image1}`}
               controls={true}
-              url={`${BASE_URL}${property.videofile}`}
+              url={`${property.videofile}`}
             />
           </VideoWrapper>
         </MainWrapper>
