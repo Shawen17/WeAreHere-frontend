@@ -109,10 +109,10 @@ const PropertyModal = (props) => {
   const navigate = useNavigate();
 
   const handleGrow = (event) => {
-    // const x = event.pageX;
-    // const y = event.pageY;
-    const x = event.clientX - 100;
-    const y = event.clientY - 100;
+    const x = event.pageX;
+    const y = event.pageY;
+    // const x = event.clientX - 100;
+    // const y = event.clientY - 100;
     setTestPosition({ ...position, top: y, left: x, display: "block" });
     setTimeout(() => setTestPosition({ ...position, display: "none" }), 1000);
   };
@@ -142,7 +142,7 @@ const PropertyModal = (props) => {
           />
         </Icon>
       </div>
-      <div onClick={HandleClick} className="g">
+      <div onClick={HandleClick} className="g" style={{ position: "relative" }}>
         <Circle>
           <div
             style={{
