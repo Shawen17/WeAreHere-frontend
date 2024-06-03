@@ -16,15 +16,23 @@ import {
   BOOKING_FAIL,
 } from "../actions/types";
 
-const initialState = {
+interface AuthState {
+  isAuthenticated: boolean;
+  access: string | null;
+  refresh: string | null;
+  user:any;
+  failed:  boolean;
+}
+
+const initialState: AuthState = {
   access: localStorage.getItem("access"),
   refresh: localStorage.getItem("refresh"),
-  isAuthenticated: null,
+  isAuthenticated: false,
   user: null,
   failed: false,
 };
 
-export default function foo(state = initialState, action: any) {
+export default function foo(state = initialState, action: any):AuthState {
   const { type, payload } = action;
 
   switch (type) {
