@@ -15,6 +15,7 @@ import {
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import styled from "styled-components";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export const Container = styled.div`
   display: flex;
@@ -41,6 +42,7 @@ const LoginForm: React.FC<PropsFromRedux> = ({
     password?: string;
   }>({});
   const [focus, setFocus] = useState(false);
+  const [loading, setLoading]= useState(false)
 
   const location = useLocation();
   document.title = "login";
@@ -72,8 +74,8 @@ const LoginForm: React.FC<PropsFromRedux> = ({
   };
   const HandleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const email = inputValues.email;
-    const password = inputValues.password;
+    setLoading(true)
+    const {email,password} = inputValues
     if (email && password) {
       await login(email, password);
     }
@@ -86,12 +88,10 @@ const LoginForm: React.FC<PropsFromRedux> = ({
   return (
     <Container className="page-load" style={{ marginTop: 80 }}>
       <Title>Welcome! enter your details </Title>
-      {loginFailed ? (
+      {loginFailed && (
         <div style={{ color: "red" }}>email or password incorrect</div>
-      ) : (
-        ""
       )}
-      <FormDisplay>
+      {loading ? (<FormDisplay>
         <Form style={formDisplay} onSubmit={HandleSubmit}>
           <Label>
             <label htmlFor="email">Email</label>
@@ -136,12 +136,12 @@ const LoginForm: React.FC<PropsFromRedux> = ({
             </Link>
           </p>
         </Outline>
-      </FormDisplay>
+      </FormDisplay>): <CircularProgress color="success" />}
     </Container>
   );
 };
 
-// Connect your component to Redux
+
 const mapStateToProps = (state: any) => ({
   isAuthenticated: state.auth.isAuthenticated,
   loginFailed: state.auth.failed,
