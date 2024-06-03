@@ -1,6 +1,7 @@
 import { Provider } from "react-redux";
 import "./App.css";
-import store from "./stores";
+import { PersistGate } from 'redux-persist/integration/react';
+import store,{persistor} from "./stores";
 import Home from "./pages/Home";
 import ConfirmBooking from "./pages/ConfirmBooking";
 import LoginForm from "./components/form/LoginForm";
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
           <Layout>
             <Routes>
@@ -129,6 +131,7 @@ function App() {
             </Routes>
           </Layout>
         </BrowserRouter>
+        </PersistGate>
       </Provider>
     </div>
   );
