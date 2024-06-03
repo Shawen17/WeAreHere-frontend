@@ -91,7 +91,7 @@ const LoginForm: React.FC<PropsFromRedux> = ({
       {loginFailed && (
         <div style={{ color: "red" }}>email or password incorrect</div>
       )}
-      {loading ? (<FormDisplay>
+      {!loading ? (<FormDisplay>
         <Form style={formDisplay} onSubmit={HandleSubmit}>
           <Label>
             <label htmlFor="email">Email</label>
